@@ -1,9 +1,19 @@
-import argparse
+import argparse,random,string
+
+def id_generator(size=4, chars=string.ascii_lowercase):
+	return ''.join(random.choice(chars) for x in range(size))
 
 def readFile(filename,database):
 	f = open(filename,'r')
 	for data in f:
 		database.append(data.split("\n")[0].split(" "))
+	return database
+
+def gen_rand_data(datarange,database):
+	i = 0
+	while i<datarange:
+		database.append([str(id_generator()),random.randrange(1990,2013),str(id_generator()),str(id_generator()),str(id_generator(1,"fm"))])
+		i = i + 1
 	return database
 
 class queryParser:
@@ -85,7 +95,8 @@ class queryParser:
 
 def main():
 	parser = argparse.ArgumentParser()
-	parser.add_argument("-f","--filename", help="Enter the filename")
+	parser.add_argument("-f","--filename", help="Enter the filename",default=None)
+	parser.add_argument("-r","--datarange", help="Enter the range of random inputs to be generated",default=10,type=int)
 	parser.add_argument("-d","--display", help="Enter the parameters to be displayed",default="all")
 	parser.add_argument("-n","--name", help="Enter the query for name",default=None)
 	parser.add_argument("-y","--year", help="Enter the query for year",default=None)
@@ -94,6 +105,7 @@ def main():
 	parser.add_argument("-g","--gender", help="Enter the query for gender",default=None)
 	args = parser.parse_args()
 	filename = args.filename
+	datarange = args.datarange
 	display = args.display
 	name = args.name
 	year = args.year
@@ -101,7 +113,10 @@ def main():
 	achievement = args.achievement
 	gender = args.gender
 	database = [["Name","Year","Category","Achievement","Gender"]]
-	database = readFile(filename,database)
+	if filename:
+		database = readFile(filename,database)
+	else:
+		database = gen_rand_data(datarange,database)
 	qp = queryParser()
 	for d in database:
 		print d
