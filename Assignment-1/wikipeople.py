@@ -151,7 +151,7 @@ def main():
 		print result
 	t = ""
 	for x in disp:
-		t = t + x + "\t"
+		t = t + str(x) + "\t"
 	print t+"\n"
 	for val in result:
 		temp = [""]*5
@@ -168,8 +168,8 @@ def main():
 				temp[g] = val[4]
 		t = ""
 		for x in temp:
-			if temp!="":
-				t = t + x + "\t"
+			if x!="":
+				t = t + str(x) + "\t"
 		print t+"\n"
 
 if __name__ == "__main__":
