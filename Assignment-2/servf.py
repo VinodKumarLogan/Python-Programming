@@ -4,6 +4,8 @@ from socket import *
 from modes import *
 from threading import Thread
 
+fileCounter = 0
+
 def guestMode(connSocket):
     ch = 'y'
     db = Database()
