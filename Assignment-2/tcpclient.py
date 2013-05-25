@@ -1,8 +1,29 @@
+#!/usr/bin/python
 import sys
 from socket import *
+from argparse import ArgumentParser
 
-serverName = sys.argv[1]
-serverPort = int(sys.argv[2])
+parser = ArgumentParser()
+parser.add_argument('-c',metavar='host',help='host name on which server runs')
+parser.add_argument('-p',metavar='port',help='port on which server runs')
+args = parser.parse_args()
+if not args.c or not args.p :
+    print 'Error : Invalid command line args'
+    print '''usage: servf.py [-h] [-c host] [-p port]
+
+optional arguments:
+-h, --help  show this help message and exit
+-c host     host name on which server runs
+-p port     port on which server runs
+    '''
+    sys.exit(1)
+serverName = args.c
+try:
+    serverPort = int(args.p)
+except:
+    print 'Error : Port number has to be an integer'
+    sys.exit(1)
+
 adminCount = 0
 flag = True
 clientSocket = socket(AF_INET, SOCK_STREAM)
@@ -24,5 +45,6 @@ while flag:
 		else:
 			break
 	except:
+		print 'Error occured'
 		break
 clientSocket.close()
