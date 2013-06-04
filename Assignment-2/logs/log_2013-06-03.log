@@ -1,0 +1,41 @@
+2013-06-03 20:39:47.6775692013-06-03 20:39:47.678517Server started on host localhost port 44444
+2013-06-03 20:39:52.801419Accepted connection from ('127.0.0.1', 39842)
+2013-06-03 20:39:53.829590 Serving ('127.0.0.1', 39842) as guest
+2013-06-03 20:40:07.340191Query all where year>2012received from ('127.0.0.1', 39842)
+2013-06-03 20:40:28.423554 Serving ('127.0.0.1', 39842) as guest
+2013-06-03 20:40:30.810795Server stopped2013-06-03 20:51:10.5288942013-06-03 20:51:14.6459922013-06-03 20:55:00.9129252013-06-03 20:55:09.7733752013-06-03 20:55:09.774325Server started on host localhost port 50000
+2013-06-03 20:55:24.713419Accepted connection from ('127.0.0.1', 43732)
+2013-06-03 20:55:26.893419 Serving ('127.0.0.1', 43732) as guest
+2013-06-03 20:55:29.322556Recievd password from ('127.0.0.1', 43732)(working in admin mode)
+2013-06-03 20:55:29.322663Authentication Successful ('127.0.0.1', 43732) now granted admin access
+2013-06-03 20:55:38.966981Query 2received from ('127.0.0.1', 43732)working in admin mode
+2013-06-03 20:56:06.192770Query 6received from ('127.0.0.1', 43732)working in admin mode
+2013-06-03 20:56:08.163222 Serving ('127.0.0.1', 43732) as guest
+2013-06-03 20:57:11.338288Server stopped2013-06-03 21:00:10.5286442013-06-03 21:00:10.529596Server started on host localhost port 50000
+2013-06-03 21:00:13.436302Accepted connection from ('127.0.0.1', 43744)
+2013-06-03 21:00:14.601526 Serving ('127.0.0.1', 43744) as guest
+2013-06-03 21:00:18.142223Recievd password from ('127.0.0.1', 43744)(working in admin mode)
+2013-06-03 21:00:18.142352Authentication Successful ('127.0.0.1', 43744) now granted admin access
+2013-06-03 21:00:22.351922Query 6received from ('127.0.0.1', 43744)working in admin mode
+2013-06-03 21:00:24.853962 Serving ('127.0.0.1', 43744) as guest
+2013-06-03 21:00:27.665440Recievd password from ('127.0.0.1', 43744)(working in admin mode)
+2013-06-03 21:00:27.665560Three unsuccessful password attempts for admin by('127.0.0.1', 43744)
+2013-06-03 21:00:29.215795 Serving ('127.0.0.1', 43744) as guest
+2013-06-03 21:00:30.808379Recievd password from ('127.0.0.1', 43744)(working in admin mode)
+2013-06-03 21:00:30.808502Three unsuccessful password attempts for admin by('127.0.0.1', 43744)
+2013-06-03 21:00:31.901799 Serving ('127.0.0.1', 43744) as guest
+2013-06-03 21:00:33.461620Recievd password from ('127.0.0.1', 43744)(working in admin mode)
+2013-06-03 21:00:33.461714Three unsuccessful password attempts for admin by('127.0.0.1', 43744)
+2013-06-03 21:00:34.566708 Serving ('127.0.0.1', 43744) as guest
+2013-06-03 21:01:19.307720Server stopped2013-06-03 21:01:19.9389692013-06-03 21:01:23.6202132013-06-03 21:01:23.621242Server started on host localhost port 12345
+2013-06-03 21:01:28.657608Accepted connection from ('127.0.0.1', 58326)
+2013-06-03 21:01:31.940734 Serving ('127.0.0.1', 58326) as guest
+2013-06-03 21:01:33.111270Recievd password from ('127.0.0.1', 58326)(working in admin mode)
+2013-06-03 21:01:33.111364Three unsuccessful password attempts for admin by('127.0.0.1', 58326)
+2013-06-03 21:01:35.100253 Serving ('127.0.0.1', 58326) as guest
+2013-06-03 21:01:35.461052Recievd password from ('127.0.0.1', 58326)(working in admin mode)
+2013-06-03 21:01:35.461169Three unsuccessful password attempts for admin by('127.0.0.1', 58326)
+2013-06-03 21:01:36.237665 Serving ('127.0.0.1', 58326) as guest
+2013-06-03 21:01:36.736584Recievd password from ('127.0.0.1', 58326)(working in admin mode)
+2013-06-03 21:01:36.736704Three unsuccessful password attempts for admin by('127.0.0.1', 58326)
+2013-06-03 22:02:34.320305Server stopped

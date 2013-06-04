@@ -49,7 +49,24 @@ background-color:#5858FA;
 }
 </style>
             '''
-        printData = '<html><title>WikiPeopleDatabase</title>'+styles+'<body><h1 align="center">Query Results</h1><table align="center" border=1 id="wikipeople"><tr>'
+        printData = '<html><title>WikiPeopleDatabase</title>'+styles;
+        printData+='''
+        <script type="text/javascript">
+        function post_to_url(buttonId) {
+            var form = document.createElement("form");
+            form.setAttribute("method", "post");
+            form.setAttribute("action", "http://172.16.2.29:8008/servf.py");
+            var nobel = document.getElementById(buttonId).value;
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", "query");
+            hiddenField.setAttribute("value", nobel);
+            form.appendChild(hiddenField);
+            document.body.appendChild(form);
+            form.submit();
+        }
+        </script><body><h1 align="center">Query Results</h1><table align="center" border=1 id="wikipeople"><tr>
+        '''
         try:
             if temp['displaycategory']=='on':
                 printData+='<th>Category</th>'
@@ -192,8 +209,10 @@ background-color:#5858FA;
                 count =  wikipeople.find({ '$or': fQuery}).count()
         except:
             return errorMongoDB("Invalid Query")
+        buttonId = 0
         for result_object in temp:
             #print result_object
+            buttonId+=1
             printData+= '<tr>'
             r = dict(result_object)
             #print r
@@ -204,7 +223,7 @@ background-color:#5858FA;
                     printData+= '<td>'+'Empty'+'</td>'
             if name==True:
                 try:
-                    printData+= '<td>'+r['name']+'</td>'
+                    printData+= '<td><input type="button" id="'+str(buttonId)+'" name="query" onclick="post_to_url(this.id)" value="'+r['name']+'" style="border-style:none;background-color:white;" /></td>'
                 except:
                     printData+= '<td>'+'Empty'+'</td>'
             if year==True:
